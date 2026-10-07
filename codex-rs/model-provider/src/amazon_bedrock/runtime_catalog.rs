@@ -38,7 +38,6 @@ pub(super) fn static_runtime_model_catalog() -> ModelsResponse {
             variant.slug = format!("{prefix}{}", model.slug);
             variant.display_name = format!("{} ({routing_label})", model.display_name);
             variant.priority = routing_priority * base_models.len() as i32 + model.priority;
-            variant.supports_search_tool = false;
             models.push(variant);
         }
     }
